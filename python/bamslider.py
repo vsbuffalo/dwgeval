@@ -63,7 +63,7 @@ class BamSlider(object):
                 if len(self._deque):
                     this_window = list(self._deque)
                     self._deque = deque()
-                    yield (Window(self._samfile.references[read.tid], self._wstart, self._wend), this_window)
+                    yield (Window(self._samfile.references[last.tid], self._wstart, self._wend), this_window)
 
                 # initialize sequence window for the length of this
                 # chromosome
